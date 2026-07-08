@@ -11,7 +11,8 @@ class ImprovedMLP(nn.Module):
             self,
             layers: list[int] = [9, 32, 32, 2],
             activation: str = "relu",
-            last_act: str = ""
+            last_act: str = "",
+            layer_norm: bool = True
     ) -> None:
         super().__init__()
 
@@ -33,7 +34,8 @@ class ImprovedMLP(nn.Module):
             model_layers.append(nn.Linear(layers[layer_idx], layers[layer_idx + 1]))
 
             if layer_idx < last_layer_idx:
-                model_layers.append(nn.LayerNorm(layers[layer_idx + 1]))
+                if layer_norm:
+                    model_layers.append(nn.LayerNorm(layers[layer_idx + 1]))
                 model_layers.append(self.act())
 
         model_layers.append(self.last_act())
