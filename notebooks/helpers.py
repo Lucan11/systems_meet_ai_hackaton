@@ -82,4 +82,4 @@ def preprocess_data(
         plt.ylabel("Samples")
         plt.title("Task 1 baseline: first selected LED")
         plt.show()
-    return X_train, y_train, X_val, y_val
+    return X_train, y_train, X_val, y_val, target_min_cm, target_range_cm
