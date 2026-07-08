@@ -1,0 +1,7 @@
+/home/lucan/projects/vlc_hackaton/.deps/picotool/picotool/picotool
+/home/lucan/projects/vlc_hackaton/.deps/picotool/picotool/picotoolTargets.cmake
+/home/lucan/projects/vlc_hackaton/.deps/picotool/picotool/picotoolTargets-release.cmake
+/home/lucan/projects/vlc_hackaton/.deps/picotool/picotool/picotoolConfig.cmake
+/home/lucan/projects/vlc_hackaton/.deps/picotool/picotool/picotoolConfigVersion.cmake
+/home/lucan/projects/vlc_hackaton/.deps/picotool/picotool/enc_bootloader.elf
+/home/lucan/projects/vlc_hackaton/.deps/picotool/picotool/enc_bootloader_mbedtls.elf

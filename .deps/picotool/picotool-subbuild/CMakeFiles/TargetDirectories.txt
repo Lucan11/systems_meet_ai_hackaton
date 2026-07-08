@@ -1,0 +1,3 @@
+/home/lucan/projects/vlc_hackaton/.deps/picotool/picotool-subbuild/CMakeFiles/picotool-populate.dir
+/home/lucan/projects/vlc_hackaton/.deps/picotool/picotool-subbuild/CMakeFiles/edit_cache.dir
+/home/lucan/projects/vlc_hackaton/.deps/picotool/picotool-subbuild/CMakeFiles/rebuild_cache.dir
