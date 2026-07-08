@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import torch
 
 
-def init(SEED = 42):
+def init(SEED = 42, gpu: bool = False):
     ROOT = Path.cwd().resolve().parent if Path.cwd().name == "notebooks" else Path.cwd().resolve()
     if str(ROOT) not in sys.path:
         sys.path.insert(0, str(ROOT))
@@ -17,8 +17,9 @@ def init(SEED = 42):
     print("PyTorch:", torch.__version__)
 
     # Make sure to run on CPU
-    import os
-    os.environ['CUDA_VISIBLE_DEVICES'] = ''
+    if not gpu:
+        import os
+        os.environ['CUDA_VISIBLE_DEVICES'] = ''
 
     TRAIN_CSV = ROOT / "data" / "train_clean_3x3_1cm.csv"
     VALIDATION_CSV = ROOT / "data" / "validation_clean_3x3_1cm.csv"
