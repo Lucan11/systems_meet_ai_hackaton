@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import torch
 
 
-def init(SEED = 42, gpu: bool = False):
+def init(SEED = 42, gpu: bool = False, task: int = 1):
     ROOT = Path.cwd().resolve().parent if Path.cwd().name == "notebooks" else Path.cwd().resolve()
     if str(ROOT) not in sys.path:
         sys.path.insert(0, str(ROOT))
@@ -21,22 +21,26 @@ def init(SEED = 42, gpu: bool = False):
         import os
         os.environ['CUDA_VISIBLE_DEVICES'] = ''
 
-    TRAIN_CSV = ROOT / "data" / "train_clean_3x3_1cm.csv"
-    VALIDATION_CSV = ROOT / "data" / "validation_clean_3x3_1cm.csv"
-    CONF1_COLUMNS = ["led_0", "led_1", "led_2", "led_3", "led_4", "led_5",
-                     "led_6", "led_7", "led_8", "led_9", "led_10", "led_11",
-                     "led_12", "led_13", "led_14", "led_15", "led_16", "led_17",
-                     "led_18", "led_19", "led_20", "led_21", "led_22", "led_23",
-                     "led_24", "led_25", "led_26", "led_27", "led_28", "led_29",
-                     "led_30", "led_31", "led_32", "led_33", "led_34", "led_35"]
-    CONF2_COLUMNS = ["led_0", "led_2", "led_4", "led_12", "led_14", "led_16", "led_24", "led_26", "led_28"]
+    if task == 1:
+        TRAIN_CSV = ROOT / "data" / "train_clean_3x3_1cm.csv"
+        VALIDATION_CSV = ROOT / "data" / "validation_clean_3x3_1cm.csv"
+        COLUMNS = ["led_0", "led_2", "led_4", "led_12", "led_14", "led_16", "led_24", "led_26", "led_28"]
+    else:
+        TRAIN_CSV = ROOT / "data" / "train_clean_6x6_8cm.csv"
+        VALIDATION_CSV = ROOT / "data" / "validation_clean_6x6_8cm.csv"
+        COLUMNS = ["led_0", "led_1", "led_2", "led_3", "led_4", "led_5",
+                         "led_6", "led_7", "led_8", "led_9", "led_10", "led_11",
+                         "led_12", "led_13", "led_14", "led_15", "led_16", "led_17",
+                         "led_18", "led_19", "led_20", "led_21", "led_22", "led_23",
+                         "led_24", "led_25", "led_26", "led_27", "led_28", "led_29",
+                         "led_30", "led_31", "led_32", "led_33", "led_34", "led_35"]
 
     def load_task1_csv(path):
         rows = []
         with path.open(newline="") as handle:
             reader = csv.DictReader(handle)
             for row in reader:
-                rows.append([float(row["x"]), float(row["y"]), *[float(row[c]) for c in CONF2_COLUMNS]])
+                rows.append([float(row["x"]), float(row["y"]), *[float(row[c]) for c in COLUMNS]])
         arr = np.asarray(rows, dtype=np.float32)
         return arr[:, 2:], arr[:, :2] / 10.0
 
