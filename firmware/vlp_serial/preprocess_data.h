@@ -1,3 +1,3 @@
 #pragma once
 
-constexpr float kRssScale = 0.842758954f;
+constexpr float kRssScale = 0.849386811f;
