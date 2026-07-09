@@ -14,6 +14,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from vlp_hackathon.baseline_model import BaselineMLP
+from vlp_hackathon.improved_model import ImprovedMLP
 from vlp_hackathon.export import tflite_to_c_array
 
 
@@ -31,7 +32,13 @@ def main() -> None:
     firmware_dir = ROOT / "firmware" / "vlp_serial"
     firmware_path = firmware_dir / "vlp_model.tflite"
 
-    model = BaselineMLP(9)
+    # model = BaselineMLP(9)
+    model = ImprovedMLP(
+        layers=[9, 126, 100, 121, 2],
+        activation="tanh",
+        last_act="sigmoid",
+        layer_norm=True,
+    )
     model.load_state_dict(torch.load(state_path, map_location="cpu"))
     model.eval()
 
