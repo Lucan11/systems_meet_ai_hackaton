@@ -4,7 +4,7 @@
 
 // based on PICO_CONFIG_HEADER_FILES:
 
-#include "/home/lucan/projects/vlc_hackaton/.deps/pico-sdk/src/boards/include/boards/pico.h"
-#include "/home/lucan/projects/vlc_hackaton/.deps/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h"
+#include "/home/vivian/aihackathon/systems_meet_ai_hackaton/.deps/pico-sdk/src/boards/include/boards/pico.h"
+#include "/home/vivian/aihackathon/systems_meet_ai_hackaton/.deps/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h"
 
 // based on PICO_RP2040_CONFIG_HEADER_FILES:

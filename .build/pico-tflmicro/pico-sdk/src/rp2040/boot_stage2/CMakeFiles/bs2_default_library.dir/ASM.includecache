@@ -6,5 +6,5 @@
 
 #IncludeRegexTransform: 
 
-/home/lucan/projects/vlc_hackaton/.build/pico-tflmicro/pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S
+/home/vivian/aihackathon/systems_meet_ai_hackaton/.build/pico-tflmicro/pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S
 

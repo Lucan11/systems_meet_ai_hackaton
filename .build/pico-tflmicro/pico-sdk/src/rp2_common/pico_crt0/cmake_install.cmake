@@ -1,4 +1,4 @@
-# Install script for directory: /home/lucan/projects/vlc_hackaton/.deps/pico-sdk/src/rp2_common/pico_crt0
+# Install script for directory: /home/vivian/aihackathon/systems_meet_ai_hackaton/.deps/pico-sdk/src/rp2_common/pico_crt0
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,8 +32,14 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
 endif()
 
-# Set default install directory permissions.
+# Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/arm-none-eabi-objdump")
 endif()
 
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "/home/vivian/aihackathon/systems_meet_ai_hackaton/.build/pico-tflmicro/pico-sdk/src/rp2_common/pico_crt0/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()

@@ -21,9 +21,9 @@ Linker script and memory map
                 0x20041fcc                literals
 LOAD CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 START GROUP
-LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a
-LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a
-LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a
+LOAD /usr/lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a
+LOAD /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a
 END GROUP
 OUTPUT(bs2_default.elf elf32-littlearm)
 LOAD linker stubs
@@ -64,9 +64,9 @@ LOAD linker stubs
  .debug_line    0x00000000       0xed CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 
 .debug_line_str
-                0x00000000      0x145
+                0x00000000      0x175
  .debug_line_str
-                0x00000000      0x145 CMakeFiles/bs2_default.dir/compile_time_choice.S.o
+                0x00000000      0x175 CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 
 .debug_info     0x00000000       0x25
  .debug_info    0x00000000       0x25 CMakeFiles/bs2_default.dir/compile_time_choice.S.o
@@ -78,5 +78,5 @@ LOAD linker stubs
  .debug_aranges
                 0x00000000       0x20 CMakeFiles/bs2_default.dir/compile_time_choice.S.o
 
-.debug_str      0x00000000       0xbb
- .debug_str     0x00000000       0xbb CMakeFiles/bs2_default.dir/compile_time_choice.S.o
+.debug_str      0x00000000       0xde
+ .debug_str     0x00000000       0xde CMakeFiles/bs2_default.dir/compile_time_choice.S.o

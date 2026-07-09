@@ -4,6 +4,6 @@
 
 method=source_dir
 command=
-source_dir=/home/lucan/projects/vlc_hackaton/.deps/pico-sdk/tools/pioasm
+source_dir=/home/vivian/aihackathon/systems_meet_ai_hackaton/.deps/pico-sdk/tools/pioasm
 work_dir=
 
