@@ -34,7 +34,7 @@ def main() -> None:
 
     # model = BaselineMLP(9)
     model = ImprovedMLP(
-        layers=[9, 126, 100, 121, 2],
+        layers=[9, 10, 10, 10, 2],
         activation="tanh",
         last_act="sigmoid",
         layer_norm=True,
