@@ -124,7 +124,7 @@ bool initialize_model() {
   }
 
   // Add operators here if the model architecture changes.
-  static tflite::MicroMutableOpResolver<3> resolver;
+  static tflite::MicroMutableOpResolver<4> resolver;
   if (resolver.AddFullyConnected() != kTfLiteOk) {
     return false;
   }
@@ -132,6 +132,9 @@ bool initialize_model() {
     return false;
   }
   if (resolver.AddLogistic() != kTfLiteOk) {
+    return false;
+  }
+  if (resolver.AddTanh() != kTfLiteOk) {
     return false;
   }
 
