@@ -37,7 +37,7 @@ def main() -> None:
         layers=[9, 10, 10, 10, 2],
         activation="tanh",
         last_act="sigmoid",
-        layer_norm=True,
+        layer_norm=False,
     )
     model.load_state_dict(torch.load(state_path, map_location="cpu"))
     model.eval()

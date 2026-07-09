@@ -12,7 +12,7 @@ class ImprovedMLP(nn.Module):
             layers: list[int] = [9, 32, 32, 2],
             activation: str = "relu",
             last_act: str = "",
-            layer_norm: bool = True
+            layer_norm: bool = False
     ) -> None:
         super().__init__()
 
