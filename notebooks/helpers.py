@@ -57,7 +57,7 @@ def init(SEED = 42, gpu: bool = False, task: int = 1):
     print("  train:", TRAIN_CSV.name, len(X_train_raw), "rows")
     print("  validation:", VALIDATION_CSV.name, len(X_val_raw), "rows")
 
-    return X_train_raw, y_train_cm, X_val_raw, y_val_cm
+    return X_train_raw, y_train_cm, X_val_raw, y_val_cm, ROOT
 
 def preprocess_data(
         X_train_raw: np.ndarray,
@@ -86,4 +86,4 @@ def preprocess_data(
         plt.ylabel("Samples")
         plt.title("Task 1 baseline: first selected LED")
         plt.show()
-    return X_train, y_train, X_val, y_val, target_min_cm, target_range_cm
+    return X_train, y_train, X_val, y_val, target_min_cm, target_range_cm, rss_scale
